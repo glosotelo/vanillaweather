@@ -11,7 +11,7 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/style.css" class="css"/>
+    <link rel="stylesheet" href="src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,7 +22,6 @@
   </head>
   <body>
     <div class="container">
-   <div class="container">
       <div class="weather-app">
         <form id="search-form">
           <input
@@ -45,49 +44,39 @@
           </div>
         </div>
         <div class="row">
-        <div class="col-6">
-        <div class="clearfix">
-            <img src="#" alt="Weather Icon"
-            id="icon"
-            class="float-left"/>
-            <div id="current wather"> Weather Description</div>
-            <div class="float-left">
-            <span id="Current-temperature">Temperature</span>
-            <span class="units">°C</span>
+          <div class="col-6">
+            <div class="clearfix">
+              <img src="#" alt="Weather Icon" id="icon" class="float-left" />
+              <div id="current-weather">Weather Description</div>
+              <div class="float-left">
+                <span id="Current-temperature">Temperature</span>
+                <span class="units">°C</span>
+              </div>
             </div>
-        </div>
-        </div>
-        <div class="col-6">
-            <ul class="aditional info">
-                <li>Humidity:<span id="humidity">98</span>%</li>
-                <li>Wind: <span id="wind">1</span>km/hr </li>
-                <li> <span id="current-temp-max">23 </span> 
-             <span class="celsius-symbol-mx">
-                 °C
-             </span>
-             |
-             <span id="current-temp-min">
-                 21
-             </span>
-             <span class="celsius symbol-min">
-                 °C
-             </span> 
-             </li>
-            </ul>
-        </div>
-      </div>
-      <div class="daily-forecast" id= "forecast">
-          Daily Forecast
           </div>
+          <div class="col-6">
+            <ul class="additional-info">
+              <li>Humidity:<span id="humidity">98</span>%</li>
+              <li>Wind: <span id="wind">1</span>km/hr</li>
+              <li>
+                <span id="current-temp-max">23 </span>
+                <span class="celsius-symbol-max"> °C </span>
+                |
+                <span id="current-temp-min"> 21 </span>
+                <span class="celsius-symbol-min"> °C </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="daily-forecast" id="forecast">Daily Forecast</div>
       </div>
     </div>
     <small>
-          <a href="https://github.com/glosotelo/vanillaweather" target="_blank"
-            >Open-source code</a
-          >
-          by Gloria Sotelo
-        </small>
-        <script src="src/index.js"></script>
+      <a href="https://github.com/glosotelo/vanillaweather" target="_blank"
+        >Open-source code</a
+      >
+      by Gloria Sotelo
+    </small>
+    <script src="src/index.js"></script>
   </body>
 </html>
-
