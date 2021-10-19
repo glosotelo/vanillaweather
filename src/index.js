@@ -49,7 +49,7 @@ function showDailyForecast(response) {
             forecastDay.weather[0].icon
           }@2x.png"
           alt=""
-          width="42"
+          width="50"
         />
                 <div class= "forecast-temperature">
                 <span class= "forecast-temp-max">${Math.round(
@@ -91,7 +91,6 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
 
   celsiusTemperature = response.data.main.temp;
 
@@ -102,9 +101,9 @@ function showTemperature(response) {
   wind.innerHTML = Math.round(response.data.wind.speed);
 
   let currentTempMax = document.querySelector("#current-temp-max");
-  currentTempMax.innerHTML = Math.round(response.data.main.temp.max);
+  currentTempMax.innerHTML = Math.round(response.data.main.temp_max);
   let currentTempMin = document.querySelector("#current-temp-min");
-  currentTempMin.innerHTML = Math.round(response.data.main.temp.min);
+  currentTempMin.innerHTML = Math.round(response.data.main.temp_min);
 
   getForecast(response.data.coord);
 }

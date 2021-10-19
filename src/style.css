@@ -13,7 +13,6 @@ div.week {
   color: #fff;
   margin: 30px auto;
   display: block;
-  list-style-type: none;
 }
 .additional-info {
   font-size: 18px;
@@ -21,31 +20,25 @@ div.week {
 }
 #icon {
   width: 130px;
-  list-style-type: none;
 }
 #city {
   font-size: 35px;
   font-weight: 500;
-  list-style-type: none;
 }
 .city-date {
   padding-left: 20px;
-  list-style-type: none;
 }
 .search-info {
   line-height: 32px;
   list-style-type: none;
   padding: 0px;
   font-size: 20px;
-  list-style-type: none;
 }
 #current-temperature {
   font-size: 40px;
 }
 #current-weather {
   font-size: 25px;
-  position: relative;
-  left: -93px;
   top: -10px;
 }
 
@@ -60,7 +53,15 @@ div.week {
 .units {
   font-size: 25px;
 }
-
+.celsius-symbol-max,
+.degrees-symbol-max,
+.forecast-temp-max {
+  color: orange;
+}
+.degrees-symbol-min,
+.forecast-temp-min {
+  color: #00449d;
+}
 .search-bar {
   width: 50%;
   padding: 5px;
@@ -72,10 +73,6 @@ div.week {
 small {
   text-align: center;
   display: block;
-}
-
-.photo-source {
-  text-align: center;
 }
 
 daily-forecast {
