@@ -49,7 +49,7 @@ function showDailyForecast(response) {
             forecastDay.weather[0].icon
           }@2x.png"
           alt=""
-          width="50"
+          width="42"
         />
                 <div class= "forecast-temperature">
                 <span class= "forecast-temp-max">${Math.round(
@@ -124,4 +124,4 @@ function handleSubmitButton(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmitButton);
 
-searchCity("Tokyo");
+searchCity("Mexico city");
