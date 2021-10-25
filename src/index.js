@@ -33,42 +33,34 @@ function formatDays(timestamp) {
   return days[day];
 }
 
-function showDailyForecast(response) {
-  let forecast = response.data.daily;
+function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
   let forecastHTML = `<div class="row">`;
-  forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
-      forecastHTML =
-        forecastHTML +
-        `<div class="col-2">
-            <div class="day">${formatDays(forecastDay.dt)}</div>
-            <img
-          src="http://openweathermap.org/img/wn/${
-            forecastDay.weather[0].icon
-          }@2x.png"
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+        <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
           alt=""
           width="42"
         />
-                <div class= "forecast-temperature">
-                <span class= "forecast-temp-max">${Math.round(
-                  forecastDay.temp.max
-                )}
-                <span class= "degrees-symbol-max">°</span>
-                </span>
-                <span class = "degrees-symbol-min">${Math.round(
-                  forecastDay.temp.min
-                )}
-                <span class= "degrees.symbol-min">°</span>
-            </span>
-            </div>
-            </div>`;
-    }
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> 18° </span>
+          <span class="weather-forecast-temperature-min"> 12° </span>
+        </div>
+      </div>
+  `;
   });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
 }
 
 function getForecast(coordinates) {
@@ -125,3 +117,4 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmitButton);
 
 searchCity("Mexico city");
+displayForecast();
